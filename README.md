@@ -50,7 +50,10 @@ Add `@nuxtjs/apollo` to `modules` section of `nuxt.config.js`
         persisting: false, // Optional
         // Use websockets for everything (no HTTP)
         // You need to pass a `wsEndpoint` for this to work
-        websocketsOnly: false // Optional
+        websocketsOnly: false, // Optional
+        // Use `include` to send user credentials even for cross-origin calls.
+        // see [here](https://developer.mozilla.org/en-US/docs/Web/API/Request/credentials)
+        credentials: 'same-origin' // Optional
       },
       test: {
         httpEndpoint: 'http://localhost:5000',
